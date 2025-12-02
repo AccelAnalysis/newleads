@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Preparing Your Postcard for New Contacts | Accel Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A practical guide from Accel Analysis on preparing an effective 4x6 postcard campaign for new, cold, or unacquainted prospects." />
+
+  <style>
+    /* --- SAME BRAND SYSTEM AS KNOWN CONTACTS PAGE --- */
+    :root {
+      --aa-navy: #020814;
+      --aa-navy-dark: #2F5597;
+      --aa-gold: #f2a922;
+      --aa-gold-soft: #ffe6b8;
+      --aa-light: #DCE6F5;
+      --aa-slate: #020814;
+      --aa-border: #e5e7eb;
+      --aa-radius-lg: 16px;
+      --aa-radius-xl: 22px;
+      --aa-shadow-soft: 0 24px 45px rgba(0, 0, 0, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #2F5597;
+      background-color: #FFFFFF;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--aa-gold);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout & Header */
+    .page {
+      min-height: 100vh;
+      background: #FFFFFF;
+      color: #2F5597;
+    }
+
+    .shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px 20px 72px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 0 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      height: 52px;
+      width: auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+
+    .brand-title {
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: var(--aa-gold);
+    }
+
+    .brand-subtitle {
+      font-weight: 600;
+      color: #4b5563;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: #4b5563;
+      font-weight: 500;
+    }
+
+    .nav-cta {
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(242,169,34,0.7);
+      background: linear-gradient(135deg, var(--aa-gold), #ffd470);
+      color: #111827;
+      font-weight: 600;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.25);
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 32px;
+      align-items: center;
+      padding: 32px 0 40px;
+    }
+
+    .hero-copy-kicker {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--aa-gold);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 3.2vw, 36px);
+      line-height: 1.15;
+      font-weight: 750;
+      margin: 0 0 8px;
+      color: var(--aa-navy-dark);
+    }
+
+    .hero-tagline {
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #9ca3af;
+      margin-bottom: 16px;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: #4b5563;
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      font-size: 13px;
+      color: #4b5563;
+      margin-bottom: 18px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f9fafb;
+      border: 1px solid var(--aa-border);
+      font-size: 12px;
+      white-space: nowrap;
+      color: #2F5597;
+    }
+
+    .hero-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--aa-gold);
+    }
+
+    .hero-primary {
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, var(--aa-gold), #ffd470);
+      color: #111827;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .hero-primary span.arrow {
+      font-size: 15px;
+      transform: translateY(1px);
+    }
+
+    /* Main content card */
+    .content-card {
+      margin-top: 56px;
+      background: #ffffff;
+      border-radius: var(--aa-radius-xl);
+      box-shadow: var(--aa-shadow-soft);
+      padding: 26px 24px 30px;
+      color: #111827;
+      border: 1px solid rgba(15,23,42,0.07);
+    }
+
+    .content-header-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 600;
+      color: var(--aa-gold);
+      margin-bottom: 4px;
+    }
+
+    .content-title {
+      font-size: 22px;
+      margin: 0 0 10px;
+      color: var(--aa-navy-dark);
+    }
+
+    .content-lede {
+      font-size: 14px;
+      color: #4b5563;
+      max-width: 650px;
+      margin-bottom: 14px;
+    }
+
+    hr.soft {
+      border: none;
+      border-top: 1px solid var(--aa-border);
+      margin: 16px 0 18px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 24px;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 17px;
+      margin: 16px 0 6px;
+      color: var(--aa-navy-dark);
+    }
+
+    h4 {
+      font-size: 14px;
+      margin: 14px 0 4px;
+      color: var(--aa-navy-dark);
+    }
+
+    p, ul {
+      font-size: 14px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 4px 0 10px;
+    }
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    .pill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+    }
+
+    .pill-block {
+      border-radius: 14px;
+      border: 1px solid var(--aa-border);
+      background: #f9fafb;
+      padding: 10px 11px 10px;
+      font-size: 13px;
+    }
+
+    .pill-block-title {
+      font-weight: 600;
+      color: var(--aa-navy);
+      margin-bottom: 4px;
+    }
+
+    .pill-block small {
+      color: #6b7280;
+      font-size: 12px;
+    }
+
+    .example-card {
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      background: #fdfbf7;
+      padding: 12px;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .example-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #9ca3af;
+    }
+
+    .callout {
+      margin-top: 16px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border-left: 3px solid var(--aa-gold);
+      background: #f9fafb;
+      font-size: 13px;
+    }
+
+    .checklist {
+      margin-top: 10px;
+      border-radius: 14px;
+      border: 1px dashed rgba(148,163,184,0.8);
+      padding: 12px 14px;
+      background: #f8fafc;
+      font-size: 13px;
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    footer a {
+      color: #9ca3af;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="page">
+    <div class="shell">
+
+      <!-- HEADER -->
+      <header>
+        <div class="brand">
+          <img src="https://img1.wsimg.com/isteam/ip/0815fdc9-aafc-4fe1-99f8-dedc9ba0e23b/blob-f3ca1db.png/:/rs=w:166,h:200,cg=true,m/cr=w:166,h:200/qt=q:95"
+               alt="Accel Analysis logo" />
+          <div class="brand-text">
+            <span class="brand-title">Accel Analysis</span>
+            <span class="brand-subtitle">Clarity. Strategy. Execution.</span>
+          </div>
+        </div>
+        <nav>
+          <a href="https://accelanalysis.com">Home</a>
+          <a href="https://accelanalysis.com/services-overview">Services</a>
+          <a href="https://accelanalysis.com/hypertargeting-directmail">Targeted Lead Generation</a>
+          <a href="https://accelanalysis.com/contact-us">Contact</a>
+          <a class="nav-cta"
+             href="https://outlook.office.com/book/AccelAnalysis1%40NETORGFT15328873.onmicrosoft.com/s/Oru7j85iDEifvq8QNV5DjQ2?ismsaljsauthenabled=">
+            Book a Discovery Meeting
+          </a>
+        </nav>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="hero-copy-kicker">Direct Mail Playbook</div>
+          <h1 class="hero-title">Prepare Your Postcard for New Contacts to Respond</h1>
+          <div class="hero-tagline">Different audience. Different psychology. Different message.</div>
+
+          <p class="hero-subtitle">
+            Cold audiences don’t know you. They’re not yet curious, trusting, or motivated.
+            Your postcard must bridge that gap instantly—capturing attention, signaling credibility,
+            and giving them a low-friction way to respond.
+          </p>
+
+          <div class="hero-points">
+            <div class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              Lead with value, not familiarity.
+            </div>
+            <div class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              Clarity beats cleverness.
+            </div>
+          </div>
+
+          <a class="hero-primary"
+             href="https://outlook.office.com/book/AccelAnalysis1%40NETORGFT15328873.onmicrosoft.com/s/Oru7j85iDEifvq8QNV5DjQ2?ismsaljsauthenabled="
+          >
+            Plan My Direct Mail Campaign <span class="arrow">→</span>
+          </a>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="hero-image">
+            <img src="https://img1.wsimg.com/isteam/ip/0815fdc9-aafc-4fe1-99f8-dedc9ba0e23b/blob-02576cc.png/:/rs=w:1440,h:1440"
+                 alt="Accel Analysis hero graphic" />
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT -->
+      <main class="content-card">
+        <div class="content-header-tag">Guide</div>
+        <h2 class="content-title">How to Prepare Before You Send a Postcard to New Contacts</h2>
+        <p class="content-lede">
+          New contacts require a fundamentally different strategy than warm ones.  
+          They don’t know you—yet.  
+          Your postcard must do three things fast:  
+          **earn attention, establish authority, and present a clear reason to respond.**
+        </p>
+
+        <hr class="soft" />
+
+        <!-- Section 1 -->
+        <section class="two-col">
+          <div>
+            <h3>1. Define the exact type of new contact you want to reach</h3>
+            <p>
+              With cold audiences, precision is everything. Your message must match one type of person,
+              one type of problem, and one type of desired result.
+            </p>
+            <ul>
+              <li>What industry, role, or profile are you targeting?</li>
+              <li>What measurable pain point do they share?</li>
+              <li>What would make them stop and say, “This is for me”?</li>
+            </ul>
+
+            <div class="pill-grid">
+              <div class="pill-block">
+                <div class="pill-block-title">Example Targets</div>
+                <small>
+                  • New homeowners (first 18 months)  
+                  • Business owners with 2–10 employees  
+                  • Women professionals navigating a career transition  
+                  • Veterans exploring entrepreneurship  
+                </small>
+              </div>
+              <div class="pill-block">
+                <div class="pill-block-title">Pro Tip</div>
+                <small>
+                  If your postcard tries to speak to everyone, it will speak to no one.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3>2. Identify the #1 problem they feel immediately</h3>
+            <p>
+              Cold audiences will only respond if they instantly recognize their problem on the card.
+            </p>
+            <ul>
+              <li>What keeps them from hitting their goals?</li>
+              <li>What is their frustration, urgency, or stress point?</li>
+              <li>What outcome do they wish they had already achieved?</li>
+            </ul>
+
+            <div class="pill-grid">
+              <div class="pill-block">
+                <div class="pill-block-title">Strong examples</div>
+                <small>
+                  • “Struggling to grow beyond word-of-mouth?”  
+                  • “Overwhelmed by too many decisions?”  
+                  • “Tired of doing everything yourself?”  
+                </small>
+              </div>
+              <div class="pill-block">
+                <div class="pill-block-title">Weak examples</div>
+                <small>
+                  • “Improve your life!”  
+                  • “Reach your dreams!”  
+                  (Too vague for cold audiences.)
+                </small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section>
+          <h3>3. Craft a simple, bold benefit-driven headline</h3>
+          <p>
+            With new contacts, the headline—not your name—does the heavy lifting.
+          </p>
+
+          <div class="example-card">
+            <span class="example-label">Strong headline examples</span>
+            <p>
+              • “Get Clear on Your Next Step—In 30 Minutes.”  
+              • “Grow Your Revenue Without Working More Hours.”  
+              • “Stop Operating in Survival Mode.”  
+            </p>
+          </div>
+
+          <div class="example-card">
+            <span class="example-label">Avoid these</span>
+            <p>
+              • “Hi, I’m Sarah, Your Coach!”  
+              • “Let me introduce myself.”  
+              (Cold audiences don’t care yet.)
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section>
+          <h3>4. Use a credibility signal early on the card</h3>
+          <p>
+            New contacts rely on quick trust cues. A single proof point can lift response rates dramatically.
+          </p>
+
+          <ul>
+            <li>Your certification or specialization</li>
+            <li>A short client result (“Helped 120+ professionals gain clarity”)</li>
+            <li>An award, affiliation, or recognizable credential</li>
+          </ul>
+
+          <div class="callout">
+            If you’re too humble on a cold-audience postcard, you will lose.  
+            New contacts need a reason to believe you instantly.
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section>
+          <h3>5. Create a “cold-friendly” offer (low friction, high value)</h3>
+          <p>
+            Cold audiences will not commit to big steps.  
+            Your offer must feel safe, quick, and beneficial to them—not you.
+          </p>
+
+          <ul>
+            <li>Free micro-assessment</li>
+            <li>Short guide or checklist delivered digitally</li>
+            <li>QR code linking to a short video introducing your approach</li>
+            <li>“15-minute Fit Call” instead of a “free consultation”</li>
+          </ul>
+
+          <div class="example-card">
+            <span class="example-label">Example offer block</span>
+            <p><strong>Get Your Free 2-Minute Clarity Snapshot.</strong><br>
+               Scan the QR code to answer 5 quick questions and receive your personalized focus score.</p>
+          </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section>
+          <h3>6. Your CTA must require zero trust</h3>
+          <p>
+            Cold audiences want control. Give them a CTA that feels light, optional, and risk-free.
+          </p>
+
+          <ul>
+            <li>“Scan for your free guide”</li>
+            <li>“See how you compare—free 2-minute benchmark”</li>
+            <li>“Watch the 30-second intro video”</li>
+          </ul>
+
+          <div class="callout">
+            Avoid: “Book a session” or “Schedule a call” as the first step.  
+            That belongs on warm-audience cards.
+          </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section>
+          <h3>7. Use design that guides the reader’s eye</h3>
+          <p>
+            Cold audiences skim. Your layout must guide them toward the CTA fast.
+          </p>
+          <ul>
+            <li>Use one big headline.</li>
+            <li>Use 1–2 micro-bullets under the headline.</li>
+            <li>Place the CTA in a bold contrasting color.</li>
+            <li>Use whitespace strategically.</li>
+          </ul>
+        </section>
+
+        <!-- Checklist -->
+        <section class="checklist">
+          <h4>Quick Prep Checklist for Cold-Audience Postcards</h4>
+          <ul>
+            <li> A narrowly defined target audience.</li>
+            <li> One urgent, relatable problem.</li>
+            <li> A benefit-driven headline.</li>
+            <li> A quick credibility signal near the top.</li>
+            <li> A low-friction offer (guide, quiz, benchmark, snapshot).</li>
+            <li> A single, simple CTA appropriate for cold audiences.</li>
+            <li> Verified QR code or link with a warm landing page.</li>
+          </ul>
+        </section>
+
+        <footer>
+          © 2025 Accel Analysis, LLC. All Rights Reserved.  
+          &nbsp;|&nbsp;
+          <a href="https://accelanalysis.com">Visit accelanalysis.com</a>
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
